@@ -1,0 +1,44 @@
+.switcher {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 3px 5px 5px #9ea19d;
+  cursor: pointer;
+}
+
+.switcher:active {
+  box-shadow: none;
+}
+.switch-month-container {
+  margin: 2rem 11rem;
+  width: 15rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.month {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 25px;
+  font-family: Tahoma;
+  transition: .3s;
+  width: 15rem;
+}
+
+.month span {
+  padding-top: 5px;
+  width: 9rem;
+  text-align: center;
+}
+
+.year {
+  font-size: 25px;
+  font-family: Tahoma;
+  transition: .3s;
+  padding: 5px 10px;
+  margin-top:3px;
+}

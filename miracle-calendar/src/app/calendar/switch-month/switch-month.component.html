@@ -1,0 +1,9 @@
+<div class="switch-month-container">
+  <div class="month">
+    <button (click)="prevMonth()" class="switcher"> < </button>
+    <span>{{ showMonth(currentMonth) }}</span>
+    <button (click)="nextMonth()" class="switcher"> > </button>
+  </div>
+  <div class="year">{{ currentMonth.getFullYear() }}</div>
+</div>
+

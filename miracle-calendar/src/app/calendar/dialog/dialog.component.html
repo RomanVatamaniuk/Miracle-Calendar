@@ -1,0 +1,66 @@
+<div class="dialog">
+  <div class="dialog-header">
+    <div class="date-container">
+      <div class="day">
+        <p>{{ data.date.getDay() | getDayName }}</p>
+      </div>
+      <div class="date">
+        <p>{{ data.date.getDate() }}</p>
+        <p>{{ data.date.getMonth() | getMonthName}}</p>
+        <p>{{ data.date.getFullYear() }}</p>
+      </div>
+    </div>
+  </div>
+
+
+  <form action="" [formGroup]="dialogForm" (keyup.enter)="onEnterKeyPress($event)">
+    <div class="dialog-form">
+      <div class="field">
+        <label for="title"><p>Title</p></label>
+        <input
+          type="text"
+          id="title"
+          formControlName="title"
+          [class.error-border]="title && title.invalid && title.touched"
+         />
+        <br/>
+        <div class="errors">
+          <span
+            *ngIf="title && title.invalid && title.value.length === 0 && title.touched" class="text-danger">Title is required</span>
+          <span *ngIf="title && title.invalid && title.value.length > 20" class="text-danger">Title must be 20 characters long</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="toDo"><p>What do you want to do</p></label>
+        <textarea id="toDo" formControlName="toDo"></textarea>
+      </div>
+    </div>
+    <div class="buttons">
+        <button
+          *ngIf="data.editMode"
+          class="delete-btn"
+          mat-dialog-close="false"
+          (click)="deleteNote(data.note.id)"
+        >Delete</button>
+      <button
+        *ngIf="!data.editMode"
+        class="submit-btn"
+        mat-dialog-close="false"
+        type="submit"
+        (click)="sendForm()"
+        [class.disabled-button]="dialogForm.invalid"
+        [disabled]="dialogForm.invalid"
+      >Submit</button>
+      <button
+        *ngIf="data.editMode"
+        class="edit-btn"
+        mat-dialog-close="false"
+        (click)="editNote(data.note.id)"
+        [class.disabled-button]="dialogForm.invalid"
+        [disabled]="dialogForm.invalid"
+      >Edit</button>
+      <button class="cancel-btn" mat-dialog-close="true">Cancel</button>
+    </div>
+  </form>
+</div>
+

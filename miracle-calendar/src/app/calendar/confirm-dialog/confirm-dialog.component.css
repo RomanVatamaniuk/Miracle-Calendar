@@ -1,0 +1,41 @@
+.confirm-dialog {
+  width: 500px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  font-size: 20px;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  margin-right: 10px;
+  outline: none;
+  background-color: #3bb332;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #fff;
+  color: #3bb332;
+  border: #3bb332 3px solid;
+}
+
+button:active {
+  background-color:#3bb332;
+  color: #ffffff;
+}

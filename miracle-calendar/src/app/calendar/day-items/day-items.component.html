@@ -1,0 +1,30 @@
+<div class="calendar-day">
+  <div class="day-container" [ngClass]="{'calendar-day-plug': day === 0}">
+    <div class="day-head">
+      <div class="day-number" *ngIf="day !== 0">{{ day }}</div>
+      <div class="today-mark"
+           *ngIf="(currentDate.getDate() === day
+         && currentMonth.getMonth() === currentDate.getMonth())
+          && currentMonth.getFullYear() === currentDate.getFullYear()"
+      >
+        Today
+      </div>
+    </div>
+
+    <div class="mark-container">
+        <div *ngIf="this.notes.length > 0">
+          <div *ngFor="let note of notes">
+            <div *ngIf="note.date.getFullYear() === currentMonth.getFullYear()">
+              <app-mark
+                *ngIf="(note.date.getDate() === day
+                && note.date.getMonth() === currentMonth.getMonth())"
+                [note]="note"
+                (click)="editMark(note, $event)"
+              >
+              </app-mark>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

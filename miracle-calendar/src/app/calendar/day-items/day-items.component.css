@@ -1,0 +1,53 @@
+.calendar-day {
+  border: 1px solid #112e10;
+  width: 11rem;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-day:hover {
+  background-color: rgba(181, 181, 179, 0.5);
+  transition: .3s;
+}
+.today-mark {
+  width: 60px;
+  height:25px;
+  background-color: #356931;
+  color:#fff;
+  margin-left: 5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.day-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  overflow: hidden;
+}
+.day-number {
+  margin-top:2px;
+}
+
+
+.calendar-day-plug {
+  border: #112e10 solid 1px;
+  width: 11rem;
+  height: 9rem;
+  background-color: #9ea19d;
+}
+
+.mark-container {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  width: 13rem;
+  height: 8rem;
+  padding-right: 20px;
+  /*margin-top: 30px;*/
+}
+
+.day-head {
+  display: flex;
+  flex-direction: row;
+}

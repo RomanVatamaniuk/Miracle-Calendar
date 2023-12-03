@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+header {
+  height: 4rem;
+  background-color:#3bb332;
+  display: flex;
+  justify-content: center;
+}
+
+header div {
+  margin-top: 1rem;
+}
+
+.calendar-word {
+  font-size: 3rem;
+  font-family: Helvetica, serif;
+  font-weight: bold;
+  color: #fff;
+}
+
+.miracle-word {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Dancing Script', cursive;
+  color: #356931;
+  padding-right:20px;
+}

@@ -1,0 +1,9 @@
+.note-body {
+  width: 9rem;
+  height: 23px;
+  background-color: #356931;
+  margin:5px;
+  color: #ffffff;
+  padding-left: 4px;
+  cursor: pointer;
+}

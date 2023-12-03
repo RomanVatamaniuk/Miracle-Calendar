@@ -1,0 +1,21 @@
+.monthly-calendar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+.week-container {
+  display: flex;
+  justify-content: center;
+}
+
+.days-of-week {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.days-of-week h3 {
+  width: 11rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
